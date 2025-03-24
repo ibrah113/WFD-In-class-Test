@@ -6,14 +6,14 @@ class Staff:
         self.staffID = staffID
         self.address = address
 
-        def print_info(self):
+    def print_info(self):
         print(f"Name: {self.name}")
         print(f"Date of Birth: {self.DoB}")
         print(f"Sex: {self.sex}")
         print(f"Staff ID: {self.staffID}")
         print(f"Address: {self.address}")
 
-        def update_name(self, new_name):
+    def update_name(self, new_name):
         if isinstance(new_name, str):
             self.name = new_name
         else:
@@ -42,3 +42,9 @@ class Staff:
             self.address = new_address
         else:
             print("Invalid type for address")
+    
+class Teacher(Staff):
+    def __init__(self, name, DoB, sex, staffID, address, subject, years_experience):
+        super().__init__(name, DoB, sex, staffID, address)
+        self.subject = subject
+        self.years_experience = years_experience
