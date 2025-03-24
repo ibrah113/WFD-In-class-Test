@@ -12,3 +12,33 @@ class Staff:
         print(f"Sex: {self.sex}")
         print(f"Staff ID: {self.staffID}")
         print(f"Address: {self.address}")
+
+        def update_name(self, new_name):
+        if isinstance(new_name, str):
+            self.name = new_name
+        else:
+            print("Invalid type for name")
+
+    def update_DoB(self, new_DoB):
+        if isinstance(new_DoB, str):  
+            self.DoB = new_DoB
+        else:
+            print("Invalid type for DoB")
+
+    def update_sex(self, new_sex):
+        if isinstance(new_sex, str):
+            self.sex = new_sex
+        else:
+            print("Invalid type for sex")
+
+    def update_staffID(self, new_staffID):
+        if isinstance(new_staffID, int):
+            self.staffID = new_staffID
+        else:
+            print("Invalid type for staffID")
+
+    def update_address(self, new_address):
+        if isinstance(new_address, str):
+            self.address = new_address
+        else:
+            print("Invalid type for address")
