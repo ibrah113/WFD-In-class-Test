@@ -48,3 +48,8 @@ class Teacher(Staff):
         super().__init__(name, DoB, sex, staffID, address)
         self.subject = subject
         self.years_experience = years_experience
+
+def print_teacher_info(self):
+        super().print_info()
+        print(f"Subject: {self.subject}")
+        print(f"Years of Experience: {self.years_experience}")
