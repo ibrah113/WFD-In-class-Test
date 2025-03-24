@@ -49,7 +49,33 @@ class Teacher(Staff):
         self.subject = subject
         self.years_experience = years_experience
 
-def print_teacher_info(self):
+    def print_teacher_info(self):
         super().print_info()
         print(f"Subject: {self.subject}")
         print(f"Years of Experience: {self.years_experience}")
+
+    def update_subject(self, new_subject):
+        if isinstance(new_subject, str):
+            self.subject = new_subject
+        else:
+            print("Invalid type for subject")
+
+    def update_years_experience(self, new_years):
+        if isinstance(new_years, int):
+            self.years_experience = new_years
+        else:
+            print("Invalid type for years of experience")
+
+
+staff1 = Staff("Mike Kazakovas ", "15/04/2004", "Male", 1001, "Tud Blanch")
+teacher1 = Teacher("Ibrahim Shaban", "11/03/2004", "Male", 1002, "Tud Blanch", "Mathematics", 8)
+
+print("Staff Info:")
+staff1.print_info()
+print("\nTeacher Info:")
+teacher1.print_teacher_info()
+
+print("\n--- Updating Staff ---")
+staff1.update_name("Ryan Smith")
+staff1.update_address("3 Castlegrange Park")
+staff1.print_info()
